@@ -1,0 +1,97 @@
+
+.table {
+  text-align: center;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button[disabled] {
+  background-color: #d6d6d6 !important;
+  color: #8c8c8c !important;
+  cursor: not-allowed !important;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.analog-clock {
+  position: relative;
+  margin: 0 auto;
+  width: 96px;
+  height: 96px;
+//   background-color: aliceblue;
+  // background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 48px;
+  transform-origin: 100% 100%;
+}
+
+.hour {
+background-color: #332661;
+width: 2.5px;
+height: 40px;
+}
+
+.minute {
+  background-color: #3f51b5;
+  width: 1.5px;
+}
+
+.second {
+  background-color: #9e9e9e;
+  width: 1px;
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.digital-clock {
+  position: absolute;
+  top: 168px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  font-size: 1em;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* Positioning the clock absolutely within the container */
+.clock {
+  position: absolute;
+  top: 36.2%;  /* Percentage-based positioning relative to the image */
+  left: 62.3%; /* Percentage-based positioning relative to the image */
+  transform: translate3d(-50%, -50%, 0); /* Ensure clock stays centered at this point */
+  z-index: 1;
+}
+
+.card-body img {
+  position: relative;
+  z-index: 0; /* Ensure image stays behind the clock */
+  width: 50%; /* Image adjusts with the window width */
+  height: 50%;
+}
+.nozoom {
+    touch-action: none;  /* Prevents touch gestures like pinch-zoom */
+    overflow: hidden;    /* Prevents content overflow */
+  }
+  
+  .nozoom img {
+    pointer-events: none;  /* Disables interactions with the image */
+  }
+  

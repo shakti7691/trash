@@ -1,0 +1,88 @@
+// ...existing code...
+
+.dialog-title {
+  text-align: center;
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.dialog-form .form-group {
+  margin-bottom: 15px;
+}
+
+.dialog-form .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.dialog-form .form-group input,
+.dialog-form .form-group select,
+.dialog-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.dialog-form .form-group input:focus,
+.dialog-form .form-group select:focus,
+.dialog-form .form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.dialog-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.dialog-form .form-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dialog-form .form-actions button.primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dialog-form .form-actions button.secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .dialog-form {
+    padding: 15px;
+  }
+
+  .dialog-form .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dialog-form .form-actions button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .dialog-form .form-actions button:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ...existing code...

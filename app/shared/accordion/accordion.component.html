@@ -1,0 +1,19 @@
+<div class="accordion w-50" id="accordionExample">
+    <div class="accordion-item ">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" (click)="toggle()">
+                {{ title }}
+            </button>
+        </h2>
+        <div [ngClass]="{'accordion-collapse': true, 'collapse': !isOpen, 'show': isOpen}">
+            <div class="accordion-body">
+                <ng-container *ngIf="contentTemplate; else defaultContent">
+                    <ng-template [ngTemplateOutlet]="contentTemplate"></ng-template>
+                </ng-container>
+                <ng-template #defaultContent>
+                    <ng-content></ng-content>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
